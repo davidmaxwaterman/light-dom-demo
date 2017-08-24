@@ -16,23 +16,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
-
-        padding: 10px;
       }
 
       #container {
-        width: 72px;
-        height: 72px;
         position: absolute;
-        left: 10px;
 
-        border: solid 1px blue;
-        transition: left 1.0s, top 1.0s;
+        left: 10px;
       }
     </style>
 
     <div id="container">
-      <slot name="image"></slot>
+      <slot></slot>
     </div>
   </template>
 

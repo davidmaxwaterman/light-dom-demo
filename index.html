@@ -105,24 +105,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-color: #eeeeee;
       }
 
-      my-app {
-        width: 72px;
-        height: 72px;
+      img {
+        opacity: 0;
+
+        transition: opacity 1s;
       }
 
-      my-app[unresolved] {
-        position: absolute;
-        left: 0;
-
-        border: solid 1px red;
-
-        transition: left 1.0s, top 1.0s;
+      img.loaded {
+        opacity: 1;
       }
     </style>
   </head>
   <body>
-    <my-app unresolved>
-      <img slot="image" src="/images/manifest/icon-72x72.png">
+    <my-app>
+      <img
+        width="96px"
+        height="96px"
+        onload="(function(el){el.classList.add('loaded');})(this)"
+        src="/images/manifest/icon-96x96.png">
     </my-app>
     <noscript>
       Please enable JavaScript to view this website.
